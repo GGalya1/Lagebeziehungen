@@ -7,22 +7,35 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        <TabControl>
+        <TabControl SelectionChanged="TabControl_SelectionChanged">
             <TabItem Header="Vektoren">
                 <Grid>
                     <Label x:Name="label" Content="Vektoren" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top"/>
-                    
+
                     <Label x:Name="label1" Content="a = " HorizontalAlignment="Left" Margin="10,96,0,0" VerticalAlignment="Top"/>
-                    <TextBox x:Name="textBox" HorizontalAlignment="Left" Height="23" Margin="38,68,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="38"/>
-                    <TextBox x:Name="textBox_Copy" HorizontalAlignment="Left" Height="23" Margin="38,99,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="38"/>
-                    <TextBox x:Name="textBox_Copy1" HorizontalAlignment="Left" Height="23" Margin="38,127,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="38"/>
-                    
+                    <TextBox x:Name="tb_ax" HorizontalAlignment="Left" Height="23" Margin="38,68,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="38"/>
+                    <TextBox x:Name="tb_ay" HorizontalAlignment="Left" Height="23" Margin="38,99,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="38"/>
+                    <TextBox x:Name="tb_az" HorizontalAlignment="Left" Height="23" Margin="38,127,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="38"/>
+
                     <Label x:Name="label1_Copy" Content="b = " HorizontalAlignment="Left" Margin="102,96,0,0" VerticalAlignment="Top"/>
-                    <TextBox x:Name="textBox_Copy2" HorizontalAlignment="Left" Height="23" Margin="138,68,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="38"/>
-                    <TextBox x:Name="textBox_Copy3" HorizontalAlignment="Left" Height="23" Margin="138,99,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="38"/>
-                    <TextBox x:Name="textBox_Copy4" HorizontalAlignment="Left" Height="23" Margin="138,127,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="38"/>
-                    <Label x:Name="label1_Copy1" Content="b = " HorizontalAlignment="Left" Margin="248,68,0,0" VerticalAlignment="Top"/>
-                    <Label x:Name="label1_Copy2" Content="b = " HorizontalAlignment="Left" Margin="248,123,0,0" VerticalAlignment="Top"/>
+                    <TextBox x:Name="tb_bx" HorizontalAlignment="Left" Height="23" Margin="138,68,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="38"/>
+                    <TextBox x:Name="tb_by" HorizontalAlignment="Left" Height="23" Margin="138,99,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="38"/>
+                    <TextBox x:Name="tb_bz" HorizontalAlignment="Left" Height="23" Margin="138,127,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="38"/>
+
+                    <Label x:Name="label1_Copy4" Content="c = " HorizontalAlignment="Left" Margin="217,96,0,0" VerticalAlignment="Top"/>
+                    <TextBox x:Name="tb_cx" HorizontalAlignment="Left" Height="23" Margin="249,68,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="38"/>
+                    <TextBox x:Name="tb_cy" HorizontalAlignment="Left" Height="23" Margin="249,99,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="38"/>
+                    <TextBox x:Name="tb_cz" HorizontalAlignment="Left" Height="23" Margin="249,127,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="38"/>
+
+
+                    <Label x:Name="label1_Copy1" Content="|a| = " HorizontalAlignment="Left" Margin="356,64,0,0" VerticalAlignment="Top"/>
+                    <TextBox x:Name="textBox1" HorizontalAlignment="Left" Height="23" Margin="387,67,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" IsReadOnly="True" />
+                    <Label x:Name="label1_Copy2" Content="|b| = " HorizontalAlignment="Left" Margin="356,95,0,0" VerticalAlignment="Top"/>
+                    <TextBox x:Name="textBox1_Copy" HorizontalAlignment="Left" Height="23" Margin="387,99,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" IsReadOnly="True"/>
+                    <Label x:Name="label1_Copy3" Content="|c| = " HorizontalAlignment="Left" Margin="357,127,0,0" VerticalAlignment="Top"/>
+                    <TextBox x:Name="textBox3" HorizontalAlignment="Left" Height="23" Margin="388,130,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" IsReadOnly="True" />
+
+                    <Button x:Name="button" Content="Berechnen" HorizontalAlignment="Left" Margin="580,99,0,0" VerticalAlignment="Top" Width="75"/>
 
 
                 </Grid>
@@ -30,7 +43,7 @@
 
             <TabItem Header="Punkt-Gerade">
                 <Grid>
-                    
+
                 </Grid>
             </TabItem>
 
