@@ -9,35 +9,47 @@
     <Grid>
         <TabControl SelectionChanged="TabControl_SelectionChanged">
             <TabItem Header="Vektoren">
-                <Grid>
-                    <Label x:Name="label" Content="Vektoren" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top"/>
+                <Grid x:Name="Grid_Vektoren">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"></ColumnDefinition>
+                        <ColumnDefinition Width="*"></ColumnDefinition>
+                        <ColumnDefinition Width="*"></ColumnDefinition>
+                        <ColumnDefinition Width="*"></ColumnDefinition>
+                        <ColumnDefinition Width="*"></ColumnDefinition>
+                        <ColumnDefinition Width="*"></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+                    
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*"></RowDefinition>
+                        <RowDefinition Height="*"></RowDefinition>
+                        <RowDefinition Height="*"></RowDefinition>
+                        <RowDefinition Height="*"></RowDefinition>
+                        <RowDefinition Height="*"></RowDefinition>
+                        <RowDefinition Height="*"></RowDefinition>
+                        <RowDefinition Height="*"></RowDefinition>
+                        <RowDefinition Height="*"></RowDefinition>
+                    </Grid.RowDefinitions>
 
-                    <Label x:Name="label1" Content="a = " HorizontalAlignment="Left" Margin="10,96,0,0" VerticalAlignment="Top"/>
-                    <TextBox x:Name="tb_ax" HorizontalAlignment="Left" Height="23" Margin="38,68,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="38" PreviewTextInput="ZahlenEingabePrüfung"/>
-                    <TextBox x:Name="tb_ay" HorizontalAlignment="Left" Height="23" Margin="38,99,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="38" PreviewTextInput="ZahlenEingabePrüfung"/>
-                    <TextBox x:Name="tb_az" HorizontalAlignment="Left" Height="23" Margin="38,127,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="38" PreviewTextInput="ZahlenEingabePrüfung"/>
+                    <TextBox Grid.Row="0" Grid.Column="2" Text="Vektoren" IsReadOnly="True"  TextAlignment="Center"/>
+                    <TextBox Grid.Row="2" Grid.Column="0" Text="Vektor a" IsReadOnly="True"  TextAlignment="Center"/>
+                    <TextBox Grid.Row="2" Grid.Column="2" Text="Vektor b" IsReadOnly="True"  TextAlignment="Center"/>
+                    <TextBox Grid.Row="2" Grid.Column="4" Text="Vektor c" IsReadOnly="True"  TextAlignment="Center"/>
 
-                    <Label x:Name="label1_Copy" Content="b = " HorizontalAlignment="Left" Margin="102,96,0,0" VerticalAlignment="Top"/>
-                    <TextBox x:Name="tb_bx" HorizontalAlignment="Left" Height="23" Margin="138,68,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="38" PreviewTextInput="ZahlenEingabePrüfung"/>
-                    <TextBox x:Name="tb_by" HorizontalAlignment="Left" Height="23" Margin="138,99,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="38" PreviewTextInput="ZahlenEingabePrüfung"/>
-                    <TextBox x:Name="tb_bz" HorizontalAlignment="Left" Height="23" Margin="138,127,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="38" PreviewTextInput="ZahlenEingabePrüfung"/>
+                    <TextBox x:Name="TB_Ba" Grid.Row="5" Grid.Column="0" Text="Betrag von Vektor a" IsReadOnly="True"  TextAlignment="Center"/>
+                    <TextBox x:Name="TB_Bb" Grid.Row="5" Grid.Column="1" Text="Betrag von Vektor b" IsReadOnly="True"  TextAlignment="Center"/>
+                    <TextBox x:Name="TB_Bc" Grid.Row="5" Grid.Column="2" Text="Betrag von Vektor c" IsReadOnly="True"  TextAlignment="Center"/>
+                    <TextBox x:Name="TB_SP" Grid.Row="5" Grid.Column="3" Text="Skalarprodukt von a und b:" IsReadOnly="True"  TextAlignment="Center"/>
+                    <TextBox x:Name="TB_VP" Grid.Row="5" Grid.Column="4" Text="Kreuzprodukt von a und b:" IsReadOnly="True"  TextAlignment="Center"/>
+                    <TextBox x:Name="TB_SPP" Grid.Row="5" Grid.Column="5" Text="Spatprodukt von a, b und c:" IsReadOnly="True"  TextAlignment="Center"/>
 
-                    <Label x:Name="label1_Copy4" Content="c = " HorizontalAlignment="Left" Margin="217,96,0,0" VerticalAlignment="Top"/>
-                    <TextBox x:Name="tb_cx" HorizontalAlignment="Left" Height="23" Margin="249,68,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="38" PreviewTextInput="ZahlenEingabePrüfung"/>
-                    <TextBox x:Name="tb_cy" HorizontalAlignment="Left" Height="23" Margin="249,99,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="38" PreviewTextInput="ZahlenEingabePrüfung"/>
-                    <TextBox x:Name="tb_cz" HorizontalAlignment="Left" Height="23" Margin="249,127,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="38" PreviewTextInput="ZahlenEingabePrüfung"/>
+                    <TextBox Grid.Row="6" Grid.Column="0" IsReadOnly="True"  TextAlignment="Center"/>
+                    <TextBox Grid.Row="6" Grid.Column="1" IsReadOnly="True"  TextAlignment="Center"/>
+                    <TextBox Grid.Row="6" Grid.Column="2" IsReadOnly="True"  TextAlignment="Center"/>
+                    <TextBox Grid.Row="6" Grid.Column="3" IsReadOnly="True"  TextAlignment="Center"/>
+                    <TextBox Grid.Row="6" Grid.Column="4" IsReadOnly="True"  TextAlignment="Center"/>
+                    <TextBox Grid.Row="6" Grid.Column="5" IsReadOnly="True"  TextAlignment="Center"/>
 
-
-                    <Label x:Name="label1_Copy1" Content="|a| = " HorizontalAlignment="Left" Margin="356,64,0,0" VerticalAlignment="Top"/>
-                    <TextBox x:Name="textBox1" HorizontalAlignment="Left" Height="23" Margin="387,67,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" IsReadOnly="True" />
-                    <Label x:Name="label1_Copy2" Content="|b| = " HorizontalAlignment="Left" Margin="356,95,0,0" VerticalAlignment="Top"/>
-                    <TextBox x:Name="textBox1_Copy" HorizontalAlignment="Left" Height="23" Margin="387,99,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" IsReadOnly="True"/>
-                    <Label x:Name="label1_Copy3" Content="|c| = " HorizontalAlignment="Left" Margin="357,127,0,0" VerticalAlignment="Top"/>
-                    <TextBox x:Name="textBox3" HorizontalAlignment="Left" Height="23" Margin="388,130,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" IsReadOnly="True" />
-
-                    <Button x:Name="button" Content="Berechnen" HorizontalAlignment="Left" Margin="580,99,0,0" VerticalAlignment="Top" Width="75" Click="button_Click"/>
-
-
+                    <Button x:Name="V_berechnen" Content="Berechnen" Grid.Column="5" Grid.Row="7" Click="V_berechnen_Click"></Button>
                 </Grid>
             </TabItem>
 
