@@ -5,6 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Lagebeziehungen"
         mc:Ignorable="d"
+        DataContext="{Binding RelativeSource={RelativeSource Self}}"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
         <TabControl SelectionChanged="TabControl_SelectionChanged">
@@ -18,6 +19,8 @@
                         <ColumnDefinition Width="*"></ColumnDefinition>
                         <ColumnDefinition Width="*"></ColumnDefinition>
                     </Grid.ColumnDefinitions>
+
+                    
                     
                     <Grid.RowDefinitions>
                         <RowDefinition Height="*"></RowDefinition>
@@ -29,6 +32,18 @@
                         <RowDefinition Height="*"></RowDefinition>
                         <RowDefinition Height="*"></RowDefinition>
                     </Grid.RowDefinitions>
+
+                    <TextBox Text="{Binding VekAX}" Grid.Column="1" Grid.Row="1" PreviewTextInput="ZahlenEingabePrüfung"></TextBox>
+                    <TextBox Text="{Binding VekAY}" Grid.Column="1" Grid.Row="2" PreviewTextInput="ZahlenEingabePrüfung"></TextBox>
+                    <TextBox Text="{Binding VekAZ}" Grid.Column="1" Grid.Row="3" PreviewTextInput="ZahlenEingabePrüfung"></TextBox>
+
+                    <TextBox Text="{Binding VekBX}" Grid.Column="3" Grid.Row="1" PreviewTextInput="ZahlenEingabePrüfung"></TextBox>
+                    <TextBox Text="{Binding VekBY}" Grid.Column="3" Grid.Row="2" PreviewTextInput="ZahlenEingabePrüfung"></TextBox>
+                    <TextBox Text="{Binding VekBZ}" Grid.Column="3" Grid.Row="3" PreviewTextInput="ZahlenEingabePrüfung"></TextBox>
+
+                    <TextBox Text="{Binding VekCX}" Grid.Column="5" Grid.Row="1" PreviewTextInput="ZahlenEingabePrüfung"></TextBox>
+                    <TextBox Text="{Binding VekCY}" Grid.Column="5" Grid.Row="2" PreviewTextInput="ZahlenEingabePrüfung"></TextBox>
+                    <TextBox Text="{Binding VekCZ}" Grid.Column="5" Grid.Row="3" PreviewTextInput="ZahlenEingabePrüfung"></TextBox>
 
                     <TextBox Grid.Row="0" Grid.Column="2" Text="Vektoren" IsReadOnly="True"  TextAlignment="Center"/>
                     <TextBox Grid.Row="2" Grid.Column="0" Text="Vektor a" IsReadOnly="True"  TextAlignment="Center"/>
@@ -54,9 +69,56 @@
             </TabItem>
 
             <TabItem Header="Punkt-Gerade">
-                <Grid>
+                <Grid x:Name="P_Gerade">
+                    <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"></ColumnDefinition>
+                            <ColumnDefinition Width="*"></ColumnDefinition>
+                            <ColumnDefinition Width="*"></ColumnDefinition>
+                            <ColumnDefinition Width="*"></ColumnDefinition>
+                            <ColumnDefinition Width="*"></ColumnDefinition>
+                            <ColumnDefinition Width="*"></ColumnDefinition>
+                        </Grid.ColumnDefinitions>
 
-                </Grid>
+
+
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="*"></RowDefinition>
+                            <RowDefinition Height="*"></RowDefinition>
+                            <RowDefinition Height="*"></RowDefinition>
+                            <RowDefinition Height="*"></RowDefinition>
+                            <RowDefinition Height="*"></RowDefinition>
+                            <RowDefinition Height="*"></RowDefinition>
+                            <RowDefinition Height="*"></RowDefinition>
+                            <RowDefinition Height="*"></RowDefinition>
+                        </Grid.RowDefinitions>
+
+                        <TextBox Text="{Binding VekAX}" Grid.Column="1" Grid.Row="1" PreviewTextInput="ZahlenEingabePrüfung"></TextBox>
+                        <TextBox Text="{Binding VekAY}" Grid.Column="1" Grid.Row="2" PreviewTextInput="ZahlenEingabePrüfung"></TextBox>
+                        <TextBox Text="{Binding VekAZ}" Grid.Column="1" Grid.Row="3" PreviewTextInput="ZahlenEingabePrüfung"></TextBox>
+
+                        <TextBox Text="{Binding VekBX}" Grid.Column="3" Grid.Row="1" PreviewTextInput="ZahlenEingabePrüfung"></TextBox>
+                        <TextBox Text="{Binding VekBY}" Grid.Column="3" Grid.Row="2" PreviewTextInput="ZahlenEingabePrüfung"></TextBox>
+                        <TextBox Text="{Binding VekBZ}" Grid.Column="3" Grid.Row="3" PreviewTextInput="ZahlenEingabePrüfung"></TextBox>
+
+                        <TextBox Text="{Binding VekCX}" Grid.Column="5" Grid.Row="1" PreviewTextInput="ZahlenEingabePrüfung"></TextBox>
+                        <TextBox Text="{Binding VekCY}" Grid.Column="5" Grid.Row="2" PreviewTextInput="ZahlenEingabePrüfung"></TextBox>
+                        <TextBox Text="{Binding VekCZ}" Grid.Column="5" Grid.Row="3" PreviewTextInput="ZahlenEingabePrüfung"></TextBox>
+
+                        <TextBox Grid.Row="0" Grid.Column="2" Text="Punkten" IsReadOnly="True"  TextAlignment="Center"/>
+                        <TextBox Grid.Row="2" Grid.Column="0" Text="Punkt P" IsReadOnly="True"  TextAlignment="Center"/>
+                        <TextBox Grid.Row="2" Grid.Column="2" Text="Punkt A" IsReadOnly="True"  TextAlignment="Center"/>
+                        <TextBox Grid.Row="2" Grid.Column="4" Text="Punkt B" IsReadOnly="True"  TextAlignment="Center"/>
+
+                        <TextBox Grid.Row="5" Grid.Column="0" Text="Gleichung der Geraden g durch A und B: " IsReadOnly="True"  TextAlignment="Center" TextWrapping="Wrap"/>
+
+                        <TextBox Grid.Row="5" Grid.Column="2" Text="Abstand von P zu g: " IsReadOnly="True"  TextAlignment="Center"/>
+
+                        <TextBox x:Name="TB_g" Grid.Row="6" Grid.Column="0" IsReadOnly="True"  TextAlignment="Center"/>
+                        <TextBox x:Name="TB_Abstand" Grid.Row="6" Grid.Column="2" IsReadOnly="True"  TextAlignment="Center"/>
+
+
+                        <Button x:Name="P_V_berechnen" Content="Berechnen" Grid.Column="5" Grid.Row="7" Click="V_berechnen_Click"></Button>
+                    </Grid>
             </TabItem>
 
             <TabItem Header="Gerade-Gerade">
