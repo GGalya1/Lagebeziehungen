@@ -35,19 +35,19 @@
                     <TextBox Grid.Row="2" Grid.Column="2" Text="Vektor b" IsReadOnly="True"  TextAlignment="Center"/>
                     <TextBox Grid.Row="2" Grid.Column="4" Text="Vektor c" IsReadOnly="True"  TextAlignment="Center"/>
 
-                    <TextBox x:Name="TB_Ba" Grid.Row="5" Grid.Column="0" Text="Betrag von Vektor a" IsReadOnly="True"  TextAlignment="Center"/>
-                    <TextBox x:Name="TB_Bb" Grid.Row="5" Grid.Column="1" Text="Betrag von Vektor b" IsReadOnly="True"  TextAlignment="Center"/>
-                    <TextBox x:Name="TB_Bc" Grid.Row="5" Grid.Column="2" Text="Betrag von Vektor c" IsReadOnly="True"  TextAlignment="Center"/>
-                    <TextBox x:Name="TB_SP" Grid.Row="5" Grid.Column="3" Text="Skalarprodukt von a und b:" IsReadOnly="True"  TextAlignment="Center"/>
-                    <TextBox x:Name="TB_VP" Grid.Row="5" Grid.Column="4" Text="Kreuzprodukt von a und b:" IsReadOnly="True"  TextAlignment="Center"/>
-                    <TextBox x:Name="TB_SPP" Grid.Row="5" Grid.Column="5" Text="Spatprodukt von a, b und c:" IsReadOnly="True"  TextAlignment="Center"/>
+                    <TextBox Grid.Row="5" Grid.Column="0" Text="Betrag von Vektor a" IsReadOnly="True"  TextAlignment="Center"/>
+                    <TextBox Grid.Row="5" Grid.Column="1" Text="Betrag von Vektor b" IsReadOnly="True"  TextAlignment="Center"/>
+                    <TextBox Grid.Row="5" Grid.Column="2" Text="Betrag von Vektor c" IsReadOnly="True"  TextAlignment="Center"/>
+                    <TextBox Grid.Row="5" Grid.Column="3" Text="Skalarprodukt von a und b:" IsReadOnly="True"  TextAlignment="Center"/>
+                    <TextBox Grid.Row="5" Grid.Column="4" Text="Kreuzprodukt von a und b:" IsReadOnly="True"  TextAlignment="Center"/>
+                    <TextBox Grid.Row="5" Grid.Column="5" Text="Spatprodukt von a, b und c:" IsReadOnly="True"  TextAlignment="Center"/>
 
-                    <TextBox Grid.Row="6" Grid.Column="0" IsReadOnly="True"  TextAlignment="Center"/>
-                    <TextBox Grid.Row="6" Grid.Column="1" IsReadOnly="True"  TextAlignment="Center"/>
-                    <TextBox Grid.Row="6" Grid.Column="2" IsReadOnly="True"  TextAlignment="Center"/>
-                    <TextBox Grid.Row="6" Grid.Column="3" IsReadOnly="True"  TextAlignment="Center"/>
-                    <TextBox Grid.Row="6" Grid.Column="4" IsReadOnly="True"  TextAlignment="Center"/>
-                    <TextBox Grid.Row="6" Grid.Column="5" IsReadOnly="True"  TextAlignment="Center"/>
+                    <TextBox x:Name="TB_Ba" Grid.Row="6" Grid.Column="0" IsReadOnly="True"  TextAlignment="Center"/>
+                    <TextBox x:Name="TB_Bb" Grid.Row="6" Grid.Column="1" IsReadOnly="True"  TextAlignment="Center"/>
+                    <TextBox x:Name="TB_Bc" Grid.Row="6" Grid.Column="2" IsReadOnly="True"  TextAlignment="Center"/>
+                    <TextBox x:Name="TB_SP" Grid.Row="6" Grid.Column="3" IsReadOnly="True"  TextAlignment="Center"/>
+                    <TextBox x:Name="TB_VP" Grid.Row="6" Grid.Column="4" IsReadOnly="True"  TextAlignment="Center"/>
+                    <TextBox x:Name="TB_SPP" Grid.Row="6" Grid.Column="5" IsReadOnly="True"  TextAlignment="Center"/>
 
                     <Button x:Name="V_berechnen" Content="Berechnen" Grid.Column="5" Grid.Row="7" Click="V_berechnen_Click"></Button>
                 </Grid>

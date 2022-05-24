@@ -110,9 +110,9 @@ namespace Lagebeziehungen
 
             //Kreuzprodukt
             double[] kreuzproduktAB = new double[3];
-            kreuzproduktAB[0] = vektor_a[1] + vektor_b[2] - vektor_a[2] * vektor_b[1];
-            kreuzproduktAB[1] = vektor_a[2] + vektor_b[0] - vektor_a[0] * vektor_b[2];
-            kreuzproduktAB[2] = vektor_a[0] + vektor_b[1] - vektor_a[1] * vektor_b[0];
+            kreuzproduktAB[0] = vektor_a[1] * vektor_b[2] - vektor_a[2] * vektor_b[1];
+            kreuzproduktAB[1] = vektor_a[2] * vektor_b[0] - vektor_a[0] * vektor_b[2];
+            kreuzproduktAB[2] = vektor_a[0] * vektor_b[1] - vektor_a[1] * vektor_b[0];
 
             //Spatprodukt
             double spatprodukt = vektor_c[0] * kreuzproduktAB[0] + vektor_c[1] * kreuzproduktAB[1] + vektor_c[2] * kreuzproduktAB[2];
